@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmlPlan>
+	<toolInformation>
+		<name>itSIMPLE</name>
+		<version>4.0.00</version>
+		<message>Planner generated a solution.</message>
+	</toolInformation>
+	<name />
+	<description />
+	<project>simple_JTFK</project>
+	<domain>simple_domain.pddl</domain>
+	<problem>simple_problem.pddl</problem>
+	<datetime>2021-06-22 10:32:55</datetime>
+	<planner id="10">
+		<name>FF 2.3</name>
+		<version>FFv-2.3 Linux</version>
+		<date>2002</date>
+		<institution />
+		<author>J. Hoffmann</author>
+		<link>http://www.loria.fr/~hoffmanj/</link>
+		<description />
+		<platform>
+			<linux />
+			<mac />
+		</platform>
+		<requirements>
+			<adl />
+			<mdp />
+			<typing />
+			<rewards />
+			<strips />
+			<equality />
+			<conditional-effects />
+			<disjunctive-preconditions />
+			<duration-inequalities />
+			<durative-actions />
+			<existential-preconditions />
+			<negative-preconditions />
+			<quantified-preconditions />
+			<universal-preconditions />
+		</requirements>
+		<consoleOutput>ff: parsing domain file 
+domain 'JTFK' defined 
+ ... done. 
+ff: parsing problem file 
+problem 'JTFK_PROBLEM' defined 
+ ... done. 
+ 
+ 
+got 62 facts 
+ 
+Cueing down from goal distance:   19 into depth [1] 
+                                  18            [1] 
+                                  17            [1] 
+                                  16            [1] 
+                                  15            [1] 
+                                  14            [1] 
+                                  13            [1] 
+                                  12            [1] 
+                                  10            [1][2] 
+                                   9            [1] 
+                                   8            [1] 
+ 
+Enforced Hill-climbing failed ! 
+switching to Best-first Search now. 
+ 
+advancing to distance :   19 
+                          18 
+                          17 
+                          16 
+                          15 
+                          14 
+                          13 
+                          11 
+                          10 
+                           9 
+                           8 
+                           7 
+                           6 
+                           4 
+                           3 
+                           2 
+                           1 
+                           0 
+ 
+ff: found legal plan as follows 
+ 
+step    0: APPEAR TAR3 
+        1: APPEAR TAR1 
+        2: APPEAR TAR2 
+        3: FILL_IN SAM1 MIS2 
+        4: SEARCH TAR3 STI1 
+        5: SEARCH TAR1 STI1 
+        6: LOCK STI1 SAM1 TAR1 MIS2 
+        7: LAUNCH SAM1 MIS2 TAR1 STI1 
+        8: KA MIS2 TAR1 
+        9: FILL_IN SAM1 MIS1 
+       10: HAND_OFF STI1 SAM1 TAR1 MIS2 
+       11: LOCK STI1 SAM1 TAR3 MIS1 
+       12: LAUNCH SAM1 MIS1 TAR3 STI1 
+       13: KA MIS1 TAR3 
+       14: HAND_OFF STI1 SAM1 TAR3 MIS1 
+       15: SEARCH TAR2 STI1 
+       16: LOCKGUN STI1 GUN1 TAR2 
+       17: KAG TAR2 GUN1 
+       18: GHAND_OFF GUN1 STI1 TAR2 
+      
+ 
+time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates 
+               0.00 seconds reachability analysis, yielding 62 facts and 41 actions 
+               0.00 seconds creating final representation with 62 relevant facts 
+               0.00 seconds building connectivity graph 
+               0.00 seconds searching, evaluating 78 states, to a max depth of 2 
+               0.00 seconds total time</consoleOutput>
+	</planner>
+	<statistics>
+		<toolTime>0.016</toolTime>
+		<time />
+		<parsingTime />
+		<nrActions />
+		<makeSpan />
+		<metricValue />
+		<planningTechnique />
+		<additional />
+		<forcedQuit />
+	</statistics>
+	<validity isValid="" />
+	<validator id="" />
+	<evaluation value="0.00">
+		<rationales />
+	</evaluation>
+	<plan>
+		<action id="APPEAR">
+			<parameters>
+				<parameter id="TAR3" />
+			</parameters>
+			<startTime>0</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="APPEAR">
+			<parameters>
+				<parameter id="TAR1" />
+			</parameters>
+			<startTime>1</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="APPEAR">
+			<parameters>
+				<parameter id="TAR2" />
+			</parameters>
+			<startTime>2</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="FILL_IN">
+			<parameters>
+				<parameter id="SAM1" />
+				<parameter id="MIS2" />
+			</parameters>
+			<startTime>3</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="SEARCH">
+			<parameters>
+				<parameter id="TAR3" />
+				<parameter id="STI1" />
+			</parameters>
+			<startTime>4</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="SEARCH">
+			<parameters>
+				<parameter id="TAR1" />
+				<parameter id="STI1" />
+			</parameters>
+			<startTime>5</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="LOCK">
+			<parameters>
+				<parameter id="STI1" />
+				<parameter id="SAM1" />
+				<parameter id="TAR1" />
+				<parameter id="MIS2" />
+			</parameters>
+			<startTime>6</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="LAUNCH">
+			<parameters>
+				<parameter id="SAM1" />
+				<parameter id="MIS2" />
+				<parameter id="TAR1" />
+				<parameter id="STI1" />
+			</parameters>
+			<startTime>7</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="KA">
+			<parameters>
+				<parameter id="MIS2" />
+				<parameter id="TAR1" />
+			</parameters>
+			<startTime>8</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="FILL_IN">
+			<parameters>
+				<parameter id="SAM1" />
+				<parameter id="MIS1" />
+			</parameters>
+			<startTime>9</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="HAND_OFF">
+			<parameters>
+				<parameter id="STI1" />
+				<parameter id="SAM1" />
+				<parameter id="TAR1" />
+				<parameter id="MIS2" />
+			</parameters>
+			<startTime>10</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="LOCK">
+			<parameters>
+				<parameter id="STI1" />
+				<parameter id="SAM1" />
+				<parameter id="TAR3" />
+				<parameter id="MIS1" />
+			</parameters>
+			<startTime>11</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="LAUNCH">
+			<parameters>
+				<parameter id="SAM1" />
+				<parameter id="MIS1" />
+				<parameter id="TAR3" />
+				<parameter id="STI1" />
+			</parameters>
+			<startTime>12</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="KA">
+			<parameters>
+				<parameter id="MIS1" />
+				<parameter id="TAR3" />
+			</parameters>
+			<startTime>13</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="HAND_OFF">
+			<parameters>
+				<parameter id="STI1" />
+				<parameter id="SAM1" />
+				<parameter id="TAR3" />
+				<parameter id="MIS1" />
+			</parameters>
+			<startTime>14</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="SEARCH">
+			<parameters>
+				<parameter id="TAR2" />
+				<parameter id="STI1" />
+			</parameters>
+			<startTime>15</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="LOCKGUN">
+			<parameters>
+				<parameter id="STI1" />
+				<parameter id="GUN1" />
+				<parameter id="TAR2" />
+			</parameters>
+			<startTime>16</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="KAG">
+			<parameters>
+				<parameter id="TAR2" />
+				<parameter id="GUN1" />
+			</parameters>
+			<startTime>17</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="GHAND_OFF">
+			<parameters>
+				<parameter id="GUN1" />
+				<parameter id="STI1" />
+				<parameter id="TAR2" />
+			</parameters>
+			<startTime>18</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+	</plan>
+	<comments />
+</xmlPlan>
+
