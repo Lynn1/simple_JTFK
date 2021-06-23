@@ -10,7 +10,7 @@
 	<project>simple_JTFK</project>
 	<domain>simple_domain.pddl</domain>
 	<problem>simple_problem.pddl</problem>
-	<datetime>2021-06-22 10:32:55</datetime>
+	<datetime>2021-06-23 10:37:39</datetime>
 	<planner id="10">
 		<name>FF 2.3</name>
 		<version>FFv-2.3 Linux</version>
@@ -47,19 +47,15 @@ problem 'JTFK_PROBLEM' defined
  ... done. 
  
  
-got 62 facts 
+got 63 facts 
  
 Cueing down from goal distance:   19 into depth [1] 
                                   18            [1] 
                                   17            [1] 
                                   16            [1] 
-                                  15            [1] 
-                                  14            [1] 
+                                  15            [1][2] 
                                   13            [1] 
-                                  12            [1] 
-                                  10            [1][2] 
-                                   9            [1] 
-                                   8            [1] 
+                                  12            [1][2] 
  
 Enforced Hill-climbing failed ! 
 switching to Best-first Search now. 
@@ -69,12 +65,10 @@ advancing to distance :   19
                           17 
                           16 
                           15 
-                          14 
                           13 
-                          11 
+                          12 
                           10 
                            9 
-                           8 
                            7 
                            6 
                            4 
@@ -85,17 +79,17 @@ advancing to distance :   19
  
 ff: found legal plan as follows 
  
-step    0: APPEAR TAR3 
-        1: APPEAR TAR1 
-        2: APPEAR TAR2 
+step    0: APPEAR TAR1 
+        1: APPEAR TAR2 
+        2: APPEAR TAR3 
         3: FILL_IN SAM1 MIS2 
-        4: SEARCH TAR3 STI1 
-        5: SEARCH TAR1 STI1 
-        6: LOCK STI1 SAM1 TAR1 MIS2 
-        7: LAUNCH SAM1 MIS2 TAR1 STI1 
-        8: KA MIS2 TAR1 
+        4: SEARCH TAR1 STI1 
+        5: LOCK STI1 SAM1 TAR1 MIS2 
+        6: LAUNCH SAM1 MIS2 TAR1 STI1 
+        7: KA MIS2 TAR1 
+        8: HAND_OFF STI1 SAM1 TAR1 MIS2 
         9: FILL_IN SAM1 MIS1 
-       10: HAND_OFF STI1 SAM1 TAR1 MIS2 
+       10: SEARCH TAR3 STI1 
        11: LOCK STI1 SAM1 TAR3 MIS1 
        12: LAUNCH SAM1 MIS1 TAR3 STI1 
        13: KA MIS1 TAR3 
@@ -107,14 +101,14 @@ step    0: APPEAR TAR3
       
  
 time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates 
-               0.00 seconds reachability analysis, yielding 62 facts and 41 actions 
-               0.00 seconds creating final representation with 62 relevant facts 
+               0.00 seconds reachability analysis, yielding 63 facts and 41 actions 
+               0.00 seconds creating final representation with 63 relevant facts 
                0.00 seconds building connectivity graph 
-               0.00 seconds searching, evaluating 78 states, to a max depth of 2 
+               0.00 seconds searching, evaluating 58 states, to a max depth of 2 
                0.00 seconds total time</consoleOutput>
 	</planner>
 	<statistics>
-		<toolTime>0.016</toolTime>
+		<toolTime>0.014</toolTime>
 		<time />
 		<parsingTime />
 		<nrActions />
@@ -132,7 +126,7 @@ time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates
 	<plan>
 		<action id="APPEAR">
 			<parameters>
-				<parameter id="TAR3" />
+				<parameter id="TAR1" />
 			</parameters>
 			<startTime>0</startTime>
 			<duration>1</duration>
@@ -140,7 +134,7 @@ time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates
 		</action>
 		<action id="APPEAR">
 			<parameters>
-				<parameter id="TAR1" />
+				<parameter id="TAR2" />
 			</parameters>
 			<startTime>1</startTime>
 			<duration>1</duration>
@@ -148,7 +142,7 @@ time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates
 		</action>
 		<action id="APPEAR">
 			<parameters>
-				<parameter id="TAR2" />
+				<parameter id="TAR3" />
 			</parameters>
 			<startTime>2</startTime>
 			<duration>1</duration>
@@ -165,19 +159,10 @@ time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates
 		</action>
 		<action id="SEARCH">
 			<parameters>
-				<parameter id="TAR3" />
-				<parameter id="STI1" />
-			</parameters>
-			<startTime>4</startTime>
-			<duration>1</duration>
-			<notes />
-		</action>
-		<action id="SEARCH">
-			<parameters>
 				<parameter id="TAR1" />
 				<parameter id="STI1" />
 			</parameters>
-			<startTime>5</startTime>
+			<startTime>4</startTime>
 			<duration>1</duration>
 			<notes />
 		</action>
@@ -188,7 +173,7 @@ time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates
 				<parameter id="TAR1" />
 				<parameter id="MIS2" />
 			</parameters>
-			<startTime>6</startTime>
+			<startTime>5</startTime>
 			<duration>1</duration>
 			<notes />
 		</action>
@@ -199,7 +184,7 @@ time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates
 				<parameter id="TAR1" />
 				<parameter id="STI1" />
 			</parameters>
-			<startTime>7</startTime>
+			<startTime>6</startTime>
 			<duration>1</duration>
 			<notes />
 		</action>
@@ -207,6 +192,17 @@ time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates
 			<parameters>
 				<parameter id="MIS2" />
 				<parameter id="TAR1" />
+			</parameters>
+			<startTime>7</startTime>
+			<duration>1</duration>
+			<notes />
+		</action>
+		<action id="HAND_OFF">
+			<parameters>
+				<parameter id="STI1" />
+				<parameter id="SAM1" />
+				<parameter id="TAR1" />
+				<parameter id="MIS2" />
 			</parameters>
 			<startTime>8</startTime>
 			<duration>1</duration>
@@ -221,12 +217,10 @@ time spent:    0.00 seconds instantiating 41 easy, 0 hard action templates
 			<duration>1</duration>
 			<notes />
 		</action>
-		<action id="HAND_OFF">
+		<action id="SEARCH">
 			<parameters>
+				<parameter id="TAR3" />
 				<parameter id="STI1" />
-				<parameter id="SAM1" />
-				<parameter id="TAR1" />
-				<parameter id="MIS2" />
 			</parameters>
 			<startTime>10</startTime>
 			<duration>1</duration>
