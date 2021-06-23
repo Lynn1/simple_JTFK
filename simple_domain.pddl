@@ -60,6 +60,7 @@
          (not (searched ?tar))
          (not (destroyed ?tar))
          (not (locked ?sti))
+         (not (exist ?sti))
        )
      :effect
        (and
@@ -130,16 +131,15 @@
      :precondition 
        (and
          (armempty ?sam)
+         (not (aimed ?sam))
          (not (loaded ?mis))
          (not (launched ?mis))
-         (not (boom ?mis))
        )
      :effect
        (and
          (not (armempty ?sam))
          (loaded ?mis)
-         (not (launched ?mis))
-         (not (boom ?mis))
+         (onlaunch ?sam ?mis)
        )
     )
 
@@ -149,11 +149,12 @@
        (and
          (not (armempty ?sam))
          (not (aimed ?sam))
+         (onlaunch ?sam ?mis)
          (loaded ?mis)
          (not (launched ?mis))
-         (not (boom ?mis))
          (exist ?sti)
          (not (locked ?sti))
+         (searched ?tar)
          (not (destroyed ?tar))
        )
      :effect
@@ -171,20 +172,19 @@
         :precondition (and 
           (aimed ?sam)
           (aimto ?sam ?tar)
+          (onlaunch ?sam ?mis)
           (loaded ?mis)
           (not (launched ?mis))
           (not (boom ?mis))
           (survice ?sam ?sti)
+          (lockon ?sti ?tar)
+          (searched ?tar)
         )
         :effect (and 
           (directto ?sti ?mis)
-          (onlaunch ?sam ?mis)
           (launched ?mis)
           (interceptto ?mis ?tar)
-          (not (boom ?mis))
           (armempty ?sam)
-          (not (aimed ?sam))
-          (not (aimto ?sam ?tar))
         )
     )
     
@@ -230,9 +230,8 @@
          (lockon ?sti ?tar)
          (survice ?sam ?sti)
          (directto ?sti ?mis)
-         (interceptto ?mis ?tar)
          (boom ?mis)
-         (destroyed ?tar)
+         (exist ?sti)
        )
      :effect
        (and
@@ -240,6 +239,8 @@
          (not (lockon ?sti ?tar))
          (not (survice ?sam ?sti))
          (not (directto ?sti ?mis))
+         (not (exist ?sti))
+         (not (aimed ?sam))
        )
     )
 )
