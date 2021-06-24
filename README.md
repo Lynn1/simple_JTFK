@@ -15,9 +15,9 @@ update `:action` to `:durative-action` (but without `:duration-inequalities` rul
 
 ![plan_results](https://github.com/Lynn1/simple_JTFK/blob/main/result_durative/supported_planner_in_itSimple4.png?raw=true)
 
-##### FFv2.3(linux):
+##### SGPlan 6(linux):
 
-![plan_result_FFv2.3](https://github.com/Lynn1/simple_JTFK/blob/main/result_durative/sgplanpreview.png?raw=true)
+![plan_result_SGPlan6](https://github.com/Lynn1/simple_JTFK/blob/main/result_durative/sgplanpreview.png?raw=true)
 
 
 
@@ -34,7 +34,7 @@ itProject.xml is the itSIMPLE4.0-beta project file.
 
 ##### FFv2.3(linux):
 
-![plan_result_FFv2.3](https://github.com/Lynn1/simple_JTFK/blob/main/result_simple/result_FFv2.3.png?raw=true)
+![plan_result_FFv2.3](https://github.com/Lynn1/simple_JTFK/blob/main/result_simple/ffplanpreview.png?raw=true)
 
 
 
